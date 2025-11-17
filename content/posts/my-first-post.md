@@ -1,17 +1,8 @@
 +++
 title = "My First Post"
-date = 2025-11-17T13:08:19-04:00
-draft = false
+date = 2025-11-17T19:14:56-04:00
+draft = true
 tags = []
 +++
 
-# Nice headers
-
-Your post content goes here. Alex is really cool!
-
-* bulleted
-* lists
-
-Make [links](https://clarkrichards.org) to awesome people
-
-![Cool guy](/bafflegab/images/hero.jpg)
+Your post content goes here.

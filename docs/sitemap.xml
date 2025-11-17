@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/bafflegab/posts/my-second-post/</loc>
-    <lastmod>2025-11-17T13:12:27-04:00</lastmod>
+    <loc>http://localhost:1313/bafflegab/posts/my-first-post/</loc>
+    <lastmod>2025-11-17T19:14:56-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/bafflegab/posts/</loc>
-    <lastmod>2025-11-17T13:12:27-04:00</lastmod>
+    <lastmod>2025-11-17T19:14:56-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/bafflegab/posts/my-first-post/</loc>
-    <lastmod>2025-11-17T13:08:19-04:00</lastmod>
+    <loc>http://localhost:1313/bafflegab/projects/project-one/</loc>
+    <lastmod>2025-11-17T02:33:31+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/bafflegab/projects/project-two/</loc>
+    <lastmod>2025-11-17T02:33:31+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/bafflegab/about/</loc>
+    <lastmod>2025-11-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/bafflegab/projects/</loc>
     <lastmod>2025-11-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/bafflegab/</loc>
