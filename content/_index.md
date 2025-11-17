@@ -2,7 +2,7 @@
 title = "Test page for new DODG site?"
 date = 2025-11-17T00:00:00Z
 draft = false
-featured_image = "/images/hero.jpg"
+featured_image = "images/hero.jpg"
 +++
 
 # Welcome
