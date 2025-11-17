@@ -14,4 +14,4 @@ Your post content goes here. Alex is really cool!
 
 Make [links](https://clarkrichards.org) to awesome people
 
-![Cool guy](images/hero.jpg)
+![Cool guy](/bafflegab/images/hero.jpg)

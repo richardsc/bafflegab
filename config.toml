@@ -1,4 +1,3 @@
-# baseURL = "https://example.com/"
 baseURL = "https://richardsc.github.io/bafflegab/"
 languageCode = "en-us"
 title = "My Hugo Site"
