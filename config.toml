@@ -1,0 +1,20 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "My Hugo Site"
+theme = "ananke"
+enableRobotsTXT = true
+publishDir = "docs"              # optional: handy for GitHub Pages using main/docs
+
+[menu]
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 10
+
+[[menu.main]]
+identifier = "projects"
+name = "Projects"
+url = "/projects/"
+weight = 20
