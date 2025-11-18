@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/bafflegab/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=bafflegab/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Notes for setting up a simple hugo website from scratch | My Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Introduction
+These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don&rsquo;t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github&rsquo;s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
+    <meta name="generator" content="Hugo 0.152.2">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/bafflegab/ananke/css/main.min.css" >
+
+
+
+
+    
+
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/bafflegab/posts/notes-for-setting-up-a-hugo-site/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/bafflegab/posts/notes-for-setting-up-a-hugo-site/">
+  <meta property="og:site_name" content="My Hugo Site">
+  <meta property="og:title" content="Notes for setting up a simple hugo website from scratch">
+  <meta property="og:description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-18T00:00:00+00:00">
+
+  <meta itemprop="name" content="Notes for setting up a simple hugo website from scratch">
+  <meta itemprop="description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
+  <meta itemprop="datePublished" content="2025-11-18T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-11-18T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1226">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Notes for setting up a simple hugo website from scratch">
+  <meta name="twitter:description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="/bafflegab/" class="f3 fw2 hover-white white-90 dib no-underline">
+      
+        My Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/bafflegab/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/bafflegab/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="/bafflegab/projects/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l mw8 center ph3 flex-wrap justify-between">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Notes for setting up a simple hugo website from scratch</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-11-18T00:00:00Z">November 18, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="introduction">Introduction</h2>
+<p>These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used <a href="gohugo.io">hugo</a> for sometime to maintain my own <a href="clarkrichards.org">personal website</a> and blog, because I don&rsquo;t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github&rsquo;s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).</p>
+<p>The goal here is to create a page that could be used by an individual or research group, that contains: a landing page, sub-pages for things like &ldquo;About&rdquo; and &ldquo;Projects&rdquo;, and a blog functionality that permits regular contributions/posts.</p>
+<p>Hugo works by converting <a href="">markdown</a>-formatted text files into html pages and organizes them and the relative style files using a &ldquo;theme&rdquo;. To first order, creating a hugo site involves simply creating/editing markdown files (pages). Sub-pages (e.g. page &ldquo;children&rdquo;) are created by creating directories and putting pages within them.</p>
+<p>Things to include:</p>
+<ul>
+<li>how to resolve <em>root</em> vs <em>subdirectory</em> hosting on github pages (and how to make sure relative links, like images, work). This matters if the site is being deployed at e.g. <code>richardsc.github.io/</code> vs <code>richardsc.github.io/subsite/</code></li>
+<li>deploying to <code>docs/</code> vs using github actions</li>
+</ul>
+<h2 id="1-install-hugo">1. Install hugo</h2>
+<p>I won&rsquo;t go into details on this, but on a mac this is most easily done with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install hugo
+</span></span></code></pre></div><p>after installing <a href="https://brew.sh/">homebrew</a> of course. On linux, you can do the same (if you&rsquo;re using homebrew/linuxbrew as I do), or you can do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install hugo
+</span></span></code></pre></div><p>Note that using <code>apt install</code> will often install an older version of hugo. You can check your version with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><h2 id="2-create-a-new-site-and-initialize-a-git-repository">2. Create a new site and initialize a git repository</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site mysite
+</span></span><span style="display:flex;"><span>cd mysite
+</span></span><span style="display:flex;"><span>git init
+</span></span></code></pre></div><h2 id="3-add-a-theme">3. Add a theme</h2>
+<p>Hugo works by making use of <em>themes</em>, which control most of the look and functionality of a site, and keep most of the actual content (i.e. the markdown files) separate from the code that controls how the site looks. There are many themes available at <a href="https://themes.gohugo.io/">themes.gohugo.io</a>. For this example, we&rsquo;ll use the <a href="https://themes.gohugo.io/themes/hugo-theme-ananke/">ananke</a> theme, which is a simple and popular theme.</p>
+<p>The theme files get installed in the <code>themes/</code> folder, and be added directly (e.g. by downloading and unzipping the theme files there), or by using git submodules. The latter is the preferred way, as it makes it easier to update the theme later. For this example we&rsquo;ll use the <a href="https://github.com/theNewDynamic/gohugo-theme-ananke">ananke</a> theme. To add ananke as a submodule, do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+</span></span></code></pre></div><h2 id="4-configure-the-site">4. Configure the site</h2>
+<p>To tell hugo which theme to use, and to set some basic site parameters, you need to edit the <code>config.toml</code> file in the root of your site folder. A minimal example for using ananke is below, where I have configured two menu items (About and Projects; we&rsquo;ll add content to those later).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://example.com/&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;en-us&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;My Hugo Site&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;ananke&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">enableRobotsTXT</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">publishDir</span> = <span style="color:#e6db74">&#34;docs&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">menu</span>]
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;projects&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Projects&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/projects/&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">20</span>
+</span></span></code></pre></div><p>Note also some of the required parameters, such as the <code>baseURL</code> (which controls the creation of links for the deployed site), and the <code>publishDir = &quot;docs&quot;</code>. The latter ensures that when the site is built, the rendered files all get put in the <code>docs/</code> folder of the site project. This is relevant later for how we will use Github pages to host the site for us.</p>
+<h2 id="5-add-content">5. Add content</h2>
+<h3 id="home-page-content">Home page content</h3>
+<p>First, to add content to the home page, you can create a file called <code>content/_index.md</code>, with something like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = &#34;Home&#34;
+</span></span><span style="display:flex;"><span>date = 2025-11-17T00:00:00Z
+</span></span><span style="display:flex;"><span>draft = false
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Welcome — this is the site homepage. Add a short intro and links to your blog and pages.
+</span></span></code></pre></div><h3 id="about-page-content">&ldquo;About&rdquo; page content</h3>
+<p>To create content for the &ldquo;About&rdquo; page, which we have already linked from the main page based on the configuration in the <code>config.toml</code>, we simply need to create a file called <code>content/about.md</code>. An example of such a file is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = &#34;About&#34;
+</span></span><span style="display:flex;"><span>date = 2025-11-17T00:00:00Z
+</span></span><span style="display:flex;"><span>draft = false
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Write a short about blurb here. This is a normal Markdown file.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>I want to write stuff here!
+</span></span></code></pre></div><p>Note the header option <code>draft = false</code>, which signifies that the page <em>should</em> be built by hugo (i.e. it is not a <em>draft</em> page). Using <code>draft = true</code> is helpful when working on pages that aren&rsquo;t ready for building, e.g. so you can keep the source contained in git while working.</p>
+<h3 id="projects-page-content">&ldquo;Projects&rdquo; page content</h3>
+<p>For the &ldquo;Projects&rdquo; pages, it would be nice to be able to put each project in its own page, with the &ldquo;Projects&rdquo; page collecting the listing of the projects as links. To do this, create the folder <code>content/projects/</code>, and within it place a file called <code>_index.md</code> with content like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = &#34;Projects&#34;
+</span></span><span style="display:flex;"><span>date = 2025-11-17T00:00:00Z
+</span></span><span style="display:flex;"><span>draft = false
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Projects
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>Below are project pages:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [<span style="color:#f92672">Project One</span>](<span style="color:#a6e22e">/bafflegab/projects/project-one/</span>)  &lt;!-- preferred: works well if permalinks change --&gt;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [<span style="color:#f92672">Project Two</span>](<span style="color:#a6e22e">/bafflegab/projects/project-two/</span>)  &lt;!-- preferred: works well if permalinks change --&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You can also show summaries automatically if your theme supports section lists; otherwise add manual links like above.
+</span></span></code></pre></div><p>Then, you can create individual pages for each project (e.g. <code>projects/project-one.md</code>), e.g.:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = &#34;Project One&#34;
+</span></span><span style="display:flex;"><span>date = 2025-11-17T02:33:31Z
+</span></span><span style="display:flex;"><span>draft = false
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Project One
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>Short description of Project One. Add details, images, links, etc.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Feature A
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> Feature B
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You can reference other pages with the relref shortcode:
+</span></span><span style="display:flex;"><span>[<span style="color:#f92672">Back to Projects</span>](<span style="color:#a6e22e">/bafflegab/projects/</span>)
+</span></span></code></pre></div><p>Create a <code>projects/project-two.md</code> similarly.</p>
+<h3 id="blogposts">Blog/posts</h3>
+<p>To make use of the &ldquo;post&rdquo; or blog functionality in hugo, we just have to create a markdown file in <code>content/posts/</code>. An easy way to do this is to use the archetype from the theme (or a custom one you create). To create a new post, do:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new posts/my-first-post.md
+</span></span></code></pre></div><p>This will create the above markdown file in <code>content/posts/</code>, based on the archetype of the theme, which will look like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;My First Post&#34;
+</span></span><span style="display:flex;"><span>date: 2025-11-17T19:08:07-04:00
+</span></span><span style="display:flex;"><span>tags: []
+</span></span><span style="display:flex;"><span>featured_image: &#34;&#34;
+</span></span><span style="display:flex;"><span>description: &#34;&#34;
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>Note that this theme (ananke) uses yaml for the header information. Hugo can use both yaml and toml. To override the theme archetype, we can create a new one in <code>archetype/default.md</code>, e.g.:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = &#34;{{ replace .Name &#34;-&#34; &#34; &#34; | title }}&#34;
+</span></span><span style="display:flex;"><span>date = {{ .Date }}
+</span></span><span style="display:flex;"><span>draft = true
+</span></span><span style="display:flex;"><span>tags = []
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Your post content goes here.
+</span></span></code></pre></div><p>which if we use to create a new post (e.g. by doing <code>hugo new posts/my-first-post.md</code>) will give:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>title = &#34;My First Post&#34;
+</span></span><span style="display:flex;"><span>date = 2025-11-17T19:14:56-04:00
+</span></span><span style="display:flex;"><span>draft = true
+</span></span><span style="display:flex;"><span>tags = []
+</span></span><span style="display:flex;"><span>+++
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Your post content goes here.
+</span></span></code></pre></div><p>Note the default setting of <code>draft = true</code>, which much be changed to <code>false</code> in order for hugo to build the page.</p>
+<h2 id="deploying-to-github-pages">Deploying to Github pages</h2>
+<p>While working on your site locally, you can use the <code>hugo server</code> command to build (and rebuild) any changes. To actually host the site on the internet, the easiest method is to use the Github pages service.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white white-70 dn dib-ns pv2 ph3 no-underline" href="http://localhost:1313/bafflegab/" >
+    &copy;  My Hugo Site 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

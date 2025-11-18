@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/bafflegab/posts/my-first-post/</loc>
-    <lastmod>2025-11-17T19:14:56-04:00</lastmod>
+    <loc>http://localhost:1313/bafflegab/posts/notes-for-setting-up-a-hugo-site/</loc>
+    <lastmod>2025-11-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/bafflegab/posts/</loc>
+    <lastmod>2025-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/bafflegab/posts/my-first-post/</loc>
     <lastmod>2025-11-17T19:14:56-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/bafflegab/projects/project-one/</loc>
