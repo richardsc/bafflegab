@@ -215,3 +215,11 @@ Note the default setting of `draft = true`, which much be changed to `false` in 
 ## Deploying to Github pages
 
 While working on your site locally, you can use the `hugo server` command to build (and rebuild) any changes. To actually host the site on the internet, the easiest method is to use the Github pages service.
+
+There are two ways to host your site on Github pages:
+
+1. By building your site on your local machine to the `docs/` folder in your site repository, and then telling Github through the repository settings to look there for a Github pages site, and
+
+2. By using Github Actions to build the site _on_ Github (e.g. after every push to the repository), and then deploying the built site to the `gh-pages` branch of the repository.
+
+For this guide, I will only describe option 1, as it is the simplest to set up. However, the option 2 is preferable for sites that will be updated frequently, as it avoids the need to build and push the built files manually.

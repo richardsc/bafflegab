@@ -50,7 +50,7 @@ These notes grew out of a discussion within the DODG group at Dalhousie, around 
   <meta itemprop="description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
   <meta itemprop="datePublished" content="2025-11-18T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-11-18T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1247">
+  <meta itemprop="wordCount" content="1364">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Notes for setting up a simple hugo website from scratch">
   <meta name="twitter:description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
@@ -263,6 +263,16 @@ These notes grew out of a discussion within the DODG group at Dalhousie, around 
 </span></span></code></pre></div><p>Note the default setting of <code>draft = true</code>, which much be changed to <code>false</code> in order for hugo to build the page.</p>
 <h2 id="deploying-to-github-pages">Deploying to Github pages</h2>
 <p>While working on your site locally, you can use the <code>hugo server</code> command to build (and rebuild) any changes. To actually host the site on the internet, the easiest method is to use the Github pages service.</p>
+<p>There are two ways to host your site on Github pages:</p>
+<ol>
+<li>
+<p>By building your site on your local machine to the <code>docs/</code> folder in your site repository, and then telling Github through the repository settings to look there for a Github pages site, and</p>
+</li>
+<li>
+<p>By using Github Actions to build the site <em>on</em> Github (e.g. after every push to the repository), and then deploying the built site to the <code>gh-pages</code> branch of the repository.</p>
+</li>
+</ol>
+<p>For this guide, I will only describe option 1, as it is the simplest to set up. However, the option 2 is preferable for sites that will be updated frequently, as it avoids the need to build and push the built files manually.</p>
 <ul class="pa0">
   
 </ul>

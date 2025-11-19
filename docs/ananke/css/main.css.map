@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/richardsc/git/bafflegab",
+	"sourceRoot": "/home/richardsc/git/bafflegab",
 	"sources": [
 		"ananke/css/main.css"
 	],
