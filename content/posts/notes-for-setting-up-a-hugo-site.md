@@ -14,11 +14,11 @@ The goal here is to create a page that could be used by an individual or researc
 Hugo works by converting [markdown]()-formatted text files into html pages and organizes them and the relative style files using a "theme". To first order, creating a hugo site involves simply creating/editing markdown files (pages). Sub-pages (e.g. page "children") are created by creating directories and putting pages within them.
 
 
-
 Things to include:
 
 * how to resolve _root_ vs _subdirectory_ hosting on github pages (and how to make sure relative links, like images, work). This matters if the site is being deployed at e.g. `richardsc.github.io/` vs `richardsc.github.io/subsite/`
 * deploying to `docs/` vs using github actions
+* if using a submodule to install the theme, make sure to update it after cloning with: `git submodule update --init --recursive`
 
 ## 1. Install hugo
 

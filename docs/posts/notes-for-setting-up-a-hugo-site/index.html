@@ -50,7 +50,7 @@ These notes grew out of a discussion within the DODG group at Dalhousie, around 
   <meta itemprop="description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
   <meta itemprop="datePublished" content="2025-11-18T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-11-18T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1226">
+  <meta itemprop="wordCount" content="1247">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Notes for setting up a simple hugo website from scratch">
   <meta name="twitter:description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
@@ -136,6 +136,7 @@ These notes grew out of a discussion within the DODG group at Dalhousie, around 
 <ul>
 <li>how to resolve <em>root</em> vs <em>subdirectory</em> hosting on github pages (and how to make sure relative links, like images, work). This matters if the site is being deployed at e.g. <code>richardsc.github.io/</code> vs <code>richardsc.github.io/subsite/</code></li>
 <li>deploying to <code>docs/</code> vs using github actions</li>
+<li>if using a submodule to install the theme, make sure to update it after cloning with: <code>git submodule update --init --recursive</code></li>
 </ul>
 <h2 id="1-install-hugo">1. Install hugo</h2>
 <p>I won&rsquo;t go into details on this, but on a mac this is most easily done with:</p>
