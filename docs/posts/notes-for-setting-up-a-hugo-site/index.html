@@ -50,7 +50,7 @@ These notes grew out of a discussion within the DODG group at Dalhousie, around 
   <meta itemprop="description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
   <meta itemprop="datePublished" content="2025-11-18T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-11-18T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1529">
+  <meta itemprop="wordCount" content="1608">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Notes for setting up a simple hugo website from scratch">
   <meta name="twitter:description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
@@ -279,7 +279,12 @@ These notes grew out of a discussion within the DODG group at Dalhousie, around 
 <p>To view your github-hosted site, go to <code>https://&lt;your-github-username&gt;.github.io/&lt;your-repo-name&gt;/</code>. If the site is contained in a repo named e.g. <code>&lt;your-github-username&gt;.github.io</code> then it will be hosted as the &ldquo;root&rdquo; site on Github pages.</p>
 <h2 id="some-pitfalls-to-avoid">Some pitfalls to avoid</h2>
 <ol>
-<li>If using git submodules to install the theme, make sure to update it after cloning to a new machine with: <code>git submodule update --init --recursive</code></li>
+<li>
+<p>If using git submodules to install the theme, make sure to update it after cloning to a new machine with: <code>git submodule update --init --recursive</code></p>
+</li>
+<li>
+<p>There are some subtleties I haven&rsquo;t totally figured out when you are using a baseURL that isn&rsquo;t itself a <em>root</em> URL. For example, for this site, the <code>baseURL</code> is <code>https://richardsc.github.io/bafflegab/</code>, which means that viewing the locally-built version has to be done at <code>https://localhost:1313/bafflegab/</code>, and it can make some of the relative linking (e.g. to images or other content) a little more complicated. One example is in the <a href="/bafflegab/projects/">&ldquo;Projects&rdquo;</a>) page of this site, which uses the <code>relref</code> functionality from hugo.</p>
+</li>
 </ol>
 <ul class="pa0">
   

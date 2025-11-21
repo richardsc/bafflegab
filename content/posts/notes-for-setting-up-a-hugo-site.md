@@ -238,3 +238,5 @@ To view your github-hosted site, go to `https://<your-github-username>.github.io
 ## Some pitfalls to avoid
 
 1. If using git submodules to install the theme, make sure to update it after cloning to a new machine with: `git submodule update --init --recursive`
+
+2. There are some subtleties I haven't totally figured out when you are using a baseURL that isn't itself a _root_ URL. For example, for this site, the `baseURL` is `https://richardsc.github.io/bafflegab/`, which means that viewing the locally-built version has to be done at `https://localhost:1313/bafflegab/`, and it can make some of the relative linking (e.g. to images or other content) a little more complicated. One example is in the ["Projects"]({{< relref "projects/_index.md" >}})) page of this site, which uses the `relref` functionality from hugo.
