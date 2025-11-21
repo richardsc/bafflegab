@@ -50,7 +50,7 @@ These notes grew out of a discussion within the DODG group at Dalhousie, around 
   <meta itemprop="description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
   <meta itemprop="datePublished" content="2025-11-18T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-11-18T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1364">
+  <meta itemprop="wordCount" content="1529">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Notes for setting up a simple hugo website from scratch">
   <meta name="twitter:description" content="Introduction These notes grew out of a discussion within the DODG group at Dalhousie, around how to create a simple website that a student can use for promoting themselves and their work. While I have used hugo for sometime to maintain my own personal website and blog, because I don’t update or build new sites frequently the process to get started was a little new. The below notes are meant to permit someone to create a simple and to teach enough about hugo to be able to customize it. Thanks are due to Github’s copilot AI, for both making the process easier and harder at the same time (e.g. by generating content that I then had to correct).">
@@ -135,7 +135,6 @@ These notes grew out of a discussion within the DODG group at Dalhousie, around 
 <p>Things to include:</p>
 <ul>
 <li>how to resolve <em>root</em> vs <em>subdirectory</em> hosting on github pages (and how to make sure relative links, like images, work). This matters if the site is being deployed at e.g. <code>richardsc.github.io/</code> vs <code>richardsc.github.io/subsite/</code></li>
-<li>deploying to <code>docs/</code> vs using github actions</li>
 <li>if using a submodule to install the theme, make sure to update it after cloning with: <code>git submodule update --init --recursive</code></li>
 </ul>
 <h2 id="1-install-hugo">1. Install hugo</h2>
@@ -214,7 +213,7 @@ These notes grew out of a discussion within the DODG group at Dalhousie, around 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">-</span> [<span style="color:#f92672">Project Two</span>](<span style="color:#a6e22e">/bafflegab/projects/project-two/</span>)  &lt;!-- preferred: works well if permalinks change --&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>You can also show summaries automatically if your theme supports section lists; otherwise add manual links like above.
-</span></span></code></pre></div><p>Then, you can create individual pages for each project (e.g. <code>projects/project-one.md</code>), e.g.:</p>
+</span></span></code></pre></div><p>Note the use of the <code>{{...}}</code> constructs (which is a hugo feature) along with the <code>relref</code> functionality, that allows the site to be able to create the correct link without having to specify it explicitly. Then, you can create individual pages for each project (e.g. <code>projects/project-one.md</code>), e.g.:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>+++
 </span></span><span style="display:flex;"><span>title = &#34;Project One&#34;
 </span></span><span style="display:flex;"><span>date = 2025-11-17T02:33:31Z
@@ -273,6 +272,15 @@ These notes grew out of a discussion within the DODG group at Dalhousie, around 
 </li>
 </ol>
 <p>For this guide, I will only describe option 1, as it is the simplest to set up. However, the option 2 is preferable for sites that will be updated frequently, as it avoids the need to build and push the built files manually.</p>
+<h3 id="deploying-to-docs">Deploying to <code>docs/</code></h3>
+<p>To deploy your site to the <code>docs/</code> folder, make sure the following option is set in your <code>config.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">publishDir</span> = <span style="color:#e6db74">&#34;docs&#34;</span>
+</span></span></code></pre></div><p>The next step is to configure Github to serve the site from the <code>docs/</code> folder. To do this, go to your repository on Github, then go to &ldquo;Settings&rdquo; -&gt; &ldquo;Pages&rdquo;, and under &ldquo;Source&rdquo;, select &ldquo;Deploy from a branch&rdquo;, then select the branch (e.g. <code>main</code> or <code>master</code>) and the folder (<code>/docs</code>). Save the settings.</p>
+<p>To view your github-hosted site, go to <code>https://&lt;your-github-username&gt;.github.io/&lt;your-repo-name&gt;/</code>. If the site is contained in a repo named e.g. <code>&lt;your-github-username&gt;.github.io</code> then it will be hosted as the &ldquo;root&rdquo; site on Github pages.</p>
+<h2 id="some-pitfalls-to-avoid">Some pitfalls to avoid</h2>
+<ol>
+<li>If using git submodules to install the theme, make sure to update it after cloning to a new machine with: <code>git submodule update --init --recursive</code></li>
+</ol>
 <ul class="pa0">
   
 </ul>

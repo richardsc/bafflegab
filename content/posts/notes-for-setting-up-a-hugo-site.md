@@ -17,7 +17,6 @@ Hugo works by converting [markdown]()-formatted text files into html pages and o
 Things to include:
 
 * how to resolve _root_ vs _subdirectory_ hosting on github pages (and how to make sure relative links, like images, work). This matters if the site is being deployed at e.g. `richardsc.github.io/` vs `richardsc.github.io/subsite/`
-* deploying to `docs/` vs using github actions
 * if using a submodule to install the theme, make sure to update it after cloning with: `git submodule update --init --recursive`
 
 ## 1. Install hugo
@@ -142,7 +141,7 @@ Below are project pages:
 You can also show summaries automatically if your theme supports section lists; otherwise add manual links like above.
 ```
 
-Then, you can create individual pages for each project (e.g. `projects/project-one.md`), e.g.:
+Note the use of the `{{...}}` constructs (which is a hugo feature) along with the `relref` functionality, that allows the site to be able to create the correct link without having to specify it explicitly. Then, you can create individual pages for each project (e.g. `projects/project-one.md`), e.g.:
 
 ```markdown
 +++
@@ -223,3 +222,19 @@ There are two ways to host your site on Github pages:
 2. By using Github Actions to build the site _on_ Github (e.g. after every push to the repository), and then deploying the built site to the `gh-pages` branch of the repository.
 
 For this guide, I will only describe option 1, as it is the simplest to set up. However, the option 2 is preferable for sites that will be updated frequently, as it avoids the need to build and push the built files manually.
+
+### Deploying to `docs/`
+
+To deploy your site to the `docs/` folder, make sure the following option is set in your `config.toml`:
+
+```toml
+publishDir = "docs"
+```
+
+The next step is to configure Github to serve the site from the `docs/` folder. To do this, go to your repository on Github, then go to "Settings" -> "Pages", and under "Source", select "Deploy from a branch", then select the branch (e.g. `main` or `master`) and the folder (`/docs`). Save the settings.
+
+To view your github-hosted site, go to `https://<your-github-username>.github.io/<your-repo-name>/`. If the site is contained in a repo named e.g. `<your-github-username>.github.io` then it will be hosted as the "root" site on Github pages.
+
+## Some pitfalls to avoid
+
+1. If using git submodules to install the theme, make sure to update it after cloning to a new machine with: `git submodule update --init --recursive`
